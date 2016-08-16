@@ -1,3 +1,13 @@
+until the livereload issue /pull request is handled you need to hack the reloadPage in livereload
+
+vim node_modules/ember-cli/node_modules/tiny-lr/node_modules/livereload-js/dist/livereload.js
+
+```
+    return this.reloadPage(path);
+```
+
+It should look like the above (we need to hack this so we can get a hook client side)
+
 # Ember-cli-hot-loader
 
 This README outlines the details of collaborating on this Ember addon.
